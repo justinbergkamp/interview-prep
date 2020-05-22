@@ -4,6 +4,12 @@ import unittest
 
 class TestLinkedListMethods(unittest.TestCase):
 
+    def test_getLength(self):
+        linkedList = LinkedList()
+        self.assertEqual(linkedList.getLength(), 0)
+        linkedListNonEmpty = LinkedList("test")
+        self.assertEqual(linkedListNonEmpty.getLength(), 1)
+
     def test_append(self):
         linkedList = LinkedList()
         length = 10
@@ -15,6 +21,7 @@ class TestLinkedListMethods(unittest.TestCase):
         linkedList.appendNodeToTail("10")
 
         self.assertEqual(linkedList.getLength(), length+1)
+
 
 
 
